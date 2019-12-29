@@ -42,16 +42,16 @@ final _darkTheme = {
 /// A basic digital clock.
 ///
 /// You can do better than this!
-class DigitalClock extends StatefulWidget {
-  const DigitalClock(this.model);
+class AstroClock extends StatefulWidget {
+  const AstroClock(this.model);
 
   final ClockModel model;
 
   @override
-  _DigitalClockState createState() => _DigitalClockState();
+  _AstroClockState createState() => _AstroClockState();
 }
 
-class _DigitalClockState extends State<DigitalClock> {
+class _AstroClockState extends State<AstroClock> {
   DateTime _dateTime = DateTime.now();
   Timer _timer;
 
@@ -64,7 +64,7 @@ class _DigitalClockState extends State<DigitalClock> {
   }
 
   @override
-  void didUpdateWidget(DigitalClock oldWidget) {
+  void didUpdateWidget(AstroClock oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.model != oldWidget.model) {
       oldWidget.model.removeListener(_updateModel);
@@ -113,6 +113,7 @@ class _DigitalClockState extends State<DigitalClock> {
         : _darkTheme;
     final hour =
         DateFormat('hh').format(_dateTime);
+    final hourForTheme = int.parse(DateFormat('HH').format(_dateTime));
     final minute = DateFormat('mm').format(_dateTime);
     final fontSize = MediaQuery.of(context).size.width / 12;
     final offset = -fontSize / 7;
@@ -132,9 +133,9 @@ class _DigitalClockState extends State<DigitalClock> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: Theme.of(context).brightness == Brightness.light
-              ? AssetImage('assets/images/bg_day.png')
-              : AssetImage('assets/images/bg_night.png'),
+              image: hourForTheme >= 18 || hourForTheme <= 6
+              ? AssetImage('assets/images/bg_night.png')
+              : AssetImage('assets/images/bg_day.png'),
               fit: BoxFit.cover)),
       child: Center(
         child: DefaultTextStyle(
@@ -166,9 +167,9 @@ class _DigitalClockState extends State<DigitalClock> {
                   child: Container(),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: Theme.of(context).brightness == Brightness.light
-                              ? AssetImage('assets/images/bg_day_front_hill.png')
-                              : AssetImage('assets/images/bg_night_front_hill.png'),
+                          image: hourForTheme >= 18 || hourForTheme <= 6
+                              ? AssetImage('assets/images/bg_night_front_hill.png')
+                              : AssetImage('assets/images/bg_day_front_hill.png'),
                           fit: BoxFit.fill)),
                 ),
               ),
