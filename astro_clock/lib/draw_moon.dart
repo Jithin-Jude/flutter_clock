@@ -11,7 +11,7 @@ class DrawMoon extends CustomPainter {
     _paint = Paint()
       ..color = Colors.white
       ..strokeWidth = 10.0
-      ..style = PaintingStyle.fill;
+      ..style = PaintingStyle.stroke;
     angleRad = angleRadians;
   }
 
@@ -24,7 +24,7 @@ class DrawMoon extends CustomPainter {
     var x = mx + (radius * cos(angleRad));
     var y = my + (radius * sin(angleRad));
 
-    canvas.drawCircle(Offset(x, y), 30.0, _paint);
+    canvas.drawCircle(Offset(x, y), 25.0, _paint);
   }
 
   @override
