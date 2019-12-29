@@ -133,19 +133,19 @@ class _DigitalClockState extends State<DigitalClock> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg_day.png'),
+              image: AssetImage('assets/images/bg_night.png'),
               fit: BoxFit.cover)),
       child: Center(
         child: DefaultTextStyle(
           style: defaultStyle,
           child: Stack(
-            children: <Widget>[
+            children: <Widget>[/*
               Positioned(
                   child: CustomPaint(
                     painter: CurvePainter(),
                     child: Container(),
                   ),
-              ),
+              ),*/
               Positioned(
                 child: CustomPaint(
                   painter: DrawSun(-((_dateTime.hour-6) * radiansPerHour +
@@ -165,7 +165,7 @@ class _DigitalClockState extends State<DigitalClock> {
                   child: Container(),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/bg_day_front_hill.png'),
+                          image: AssetImage('assets/images/bg_night_front_hill.png'),
                           fit: BoxFit.fill)),
                 ),
               ),

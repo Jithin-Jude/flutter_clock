@@ -22,6 +22,8 @@ flutter:
   assets:
     - assets/images/bg_day.png
     - assets/images/bg_day_front_hill.png
+    - assets/images/bg_night.png
+    - assets/images/bg_night_front_hill.png
   fonts:
     - family: PressStart2P
       fonts:
