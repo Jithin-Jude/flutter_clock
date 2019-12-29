@@ -11,7 +11,6 @@ import 'package:intl/intl.dart';
 import 'package:vector_math/vector_math_64.dart' show radians;
 
 
-import './curve_painter.dart';
 import './draw_sun.dart';
 
 
@@ -35,7 +34,7 @@ final _lightTheme = {
 };
 
 final _darkTheme = {
-  _Element.background: Colors.black,
+  _Element.background: AssetImage("assets/images/bg_night.png"),
   _Element.text: Colors.white,
   _Element.shadow: Color(0xFF174EA6),
 };
@@ -133,7 +132,9 @@ class _DigitalClockState extends State<DigitalClock> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg_night.png'),
+              image: Theme.of(context).brightness == Brightness.light
+              ? AssetImage('assets/images/bg_day.png')
+              : AssetImage('assets/images/bg_night.png'),
               fit: BoxFit.cover)),
       child: Center(
         child: DefaultTextStyle(
@@ -165,7 +166,9 @@ class _DigitalClockState extends State<DigitalClock> {
                   child: Container(),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/bg_night_front_hill.png'),
+                          image: Theme.of(context).brightness == Brightness.light
+                              ? AssetImage('assets/images/bg_day_front_hill.png')
+                              : AssetImage('assets/images/bg_night_front_hill.png'),
                           fit: BoxFit.fill)),
                 ),
               ),
