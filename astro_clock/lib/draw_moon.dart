@@ -11,7 +11,7 @@ class DrawMoon extends CustomPainter {
     _paint = Paint()
       ..color = Colors.white
       ..strokeWidth = 10.0
-      ..style = PaintingStyle.stroke;
+      ..style = PaintingStyle.fill;
     angleRad = angleRadians;
   }
 
@@ -19,7 +19,7 @@ class DrawMoon extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     var mx = size.width/2;
     var my = size.height;
-    var radius = size.height-(size.height/3.8);
+    var radius = size.height-(size.height/3.5);
 
     var x = mx + (radius * cos(angleRad));
     var y = my + (radius * sin(angleRad));

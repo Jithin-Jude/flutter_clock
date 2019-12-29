@@ -160,6 +160,19 @@ class _DigitalClockState extends State<DigitalClock> {
                   child: Container(),
                 ),
               ),
+              Positioned(
+                child: Container(
+                  child: Container(),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/images/bg_day_front_hill.png'),
+                          fit: BoxFit.fill)),
+                ),
+              ),
+              Positioned(
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  child: Container()),
 
               Positioned(left: MediaQuery.of(context).size.width/5.5, bottom: 0, child: Text(hour)),
               Positioned(left: MediaQuery.of(context).size.width/2.7, bottom: 0, child: Text(":")),
