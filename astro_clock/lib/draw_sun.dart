@@ -19,9 +19,10 @@ class DrawSun extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     var mx = size.width/2;
     var my = size.height;
+    var radius = size.height-(size.height/3.8);
 
-    var x = mx + (240 * cos(angleRad));
-    var y = my + (240 * sin(angleRad));
+    var x = mx + (radius * cos(angleRad));
+    var y = my + (radius * sin(angleRad));
 
     canvas.drawCircle(Offset(x, y), 30.0, _paint);
   }
