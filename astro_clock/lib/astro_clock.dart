@@ -133,7 +133,7 @@ class _AstroClockState extends State<AstroClock> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: hourForTheme >= 18 || hourForTheme <= 6
+              image: hourForTheme >= 18 || hourForTheme < 6
               ? AssetImage('assets/images/bg_night.png')
               : AssetImage('assets/images/bg_day.png'),
               fit: BoxFit.cover)),
@@ -167,7 +167,7 @@ class _AstroClockState extends State<AstroClock> {
                   child: Container(),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: hourForTheme >= 18 || hourForTheme <= 6
+                          image: hourForTheme >= 18 || hourForTheme < 6
                               ? AssetImage('assets/images/bg_night_front_hill.png')
                               : AssetImage('assets/images/bg_day_front_hill.png'),
                           fit: BoxFit.fill)),
