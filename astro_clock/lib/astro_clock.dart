@@ -22,19 +22,28 @@ final radiansPerTick = radians(360 / 60);
 final radiansPerHour = radians(360 / 24);
 
 enum _Element {
-  background,
+  backgroundDay,
+  backgroundNight,
+  frontMountainDay,
+  frontMountainNight,
   text,
   shadow,
 }
 
 final _lightTheme = {
-  _Element.background: Color(0xFF81B3FE), //AssetImage("assets/images/bg_day.png")
+  _Element.backgroundDay: AssetImage("assets/images/bg_day_light.png"),
+  _Element.frontMountainDay: AssetImage('assets/images/bg_day_front_hill_light.png'),
+  _Element.backgroundNight: AssetImage("assets/images/bg_night_light.png"),
+  _Element.frontMountainNight: AssetImage('assets/images/bg_night_front_hill_light.png'),
   _Element.text: Colors.white,
   _Element.shadow: Colors.black,
 };
 
 final _darkTheme = {
-  _Element.background: Colors.black, //AssetImage("assets/images/bg_night.png")
+  _Element.backgroundDay: AssetImage("assets/images/bg_day_dark.png"),
+  _Element.frontMountainDay: AssetImage('assets/images/bg_day_front_hill_dark.png'),
+  _Element.backgroundNight: AssetImage("assets/images/bg_night_dark.png"),
+  _Element.frontMountainNight: AssetImage('assets/images/bg_night_front_hill_dark.png'),
   _Element.text: Colors.white,
   _Element.shadow: Color(0xFF174EA6),
 };
@@ -134,8 +143,8 @@ class _AstroClockState extends State<AstroClock> {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: hourForTheme >= 18 || hourForTheme < 6
-              ? AssetImage('assets/images/bg_night.png')
-              : AssetImage('assets/images/bg_day.png'),
+              ? colors[_Element.backgroundNight]
+              : colors[_Element.backgroundDay],
               fit: BoxFit.cover)),
       child: Center(
         child: DefaultTextStyle(
@@ -168,8 +177,8 @@ class _AstroClockState extends State<AstroClock> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: hourForTheme >= 18 || hourForTheme < 6
-                              ? AssetImage('assets/images/bg_night_front_hill.png')
-                              : AssetImage('assets/images/bg_day_front_hill.png'),
+                              ? colors[_Element.frontMountainNight]
+                              : colors[_Element.frontMountainDay],
                           fit: BoxFit.fill)),
                 ),
               ),
