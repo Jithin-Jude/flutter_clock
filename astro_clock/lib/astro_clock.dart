@@ -28,13 +28,13 @@ enum _Element {
 }
 
 final _lightTheme = {
-  _Element.background: AssetImage("assets/images/bg_day.png") ,
+  _Element.background: Color(0xFF81B3FE), //AssetImage("assets/images/bg_day.png")
   _Element.text: Colors.white,
   _Element.shadow: Colors.black,
 };
 
 final _darkTheme = {
-  _Element.background: AssetImage("assets/images/bg_night.png"),
+  _Element.background: Colors.black, //AssetImage("assets/images/bg_night.png")
   _Element.text: Colors.white,
   _Element.shadow: Color(0xFF174EA6),
 };
