@@ -45,7 +45,7 @@ final _darkTheme = {
   _Element.backgroundNight: AssetImage("assets/images/bg_night_dark.png"),
   _Element.frontMountainNight: AssetImage('assets/images/bg_night_front_hill_dark.png'),
   _Element.text: Colors.white,
-  _Element.shadow: Color(0xFF174EA6),
+  _Element.shadow: Colors.black,
 };
 
 /// A basic digital clock.
