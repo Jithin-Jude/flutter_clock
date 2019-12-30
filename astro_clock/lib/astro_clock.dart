@@ -121,7 +121,7 @@ class _AstroClockState extends State<AstroClock> {
         ? _lightTheme
         : _darkTheme;
     final hour =
-        DateFormat('hh').format(_dateTime);
+    DateFormat(widget.model.is24HourFormat ? 'HH' : 'hh').format(_dateTime);
     final hourForTheme = int.parse(DateFormat('HH').format(_dateTime));
     final minute = DateFormat('mm').format(_dateTime);
     final fontSize = MediaQuery.of(context).size.width / 12;
