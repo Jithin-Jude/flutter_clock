@@ -150,13 +150,7 @@ class _AstroClockState extends State<AstroClock> {
         child: DefaultTextStyle(
           style: defaultStyle,
           child: Stack(
-            children: <Widget>[/*
-              Positioned(
-                  child: CustomPaint(
-                    painter: CurvePainter(),
-                    child: Container(),
-                  ),
-              ),*/
+            children: <Widget>[
               Positioned(
                 child: CustomPaint(
                   painter: DrawSun(-((_dateTime.hour-6) * radiansPerHour +
