@@ -29,6 +29,6 @@ flutter:
     - assets/images/bg_night_front_hill_light.png
     - assets/images/bg_night_front_hill_dark.png
   fonts:
-    - family: PressStart2P
+    - family: C800Regular
       fonts:
-        - asset: third_party/PressStart2P-Regular.ttf
+        - asset: third_party/C800Regular-W16E.ttf
