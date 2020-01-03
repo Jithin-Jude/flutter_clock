@@ -31,4 +31,4 @@ flutter:
   fonts:
     - family: C800Regular
       fonts:
-        - asset: third_party/C800Regular-W16E.ttf
+        - asset: assets/fonts/C800Regular-W16E.ttf
