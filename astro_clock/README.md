@@ -6,7 +6,7 @@ It also has dim-theme for dark mode.
 
 How to calculate time?
 -
-Users can calculate time according to the position of Sun and Moon with respect to background.
+Users can calculate time according to the position of Sun and Moon with respect to the background.
 
 The three clouds from right to left denotes 09:00 AM/PM, 12:00 AM/PM, & 03:00 AM/PM respectively.
 
