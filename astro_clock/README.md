@@ -16,6 +16,10 @@ Working
 -
 [Watch AstroClock demo on YouTube](https://youtu.be/4XEsHSq_ZXs)
 
+Design Principle
+-
+AstroClock is based on the principle such that Sun/Moon rises in the East and Sets on the West(theoretically).
+
 Screenshots
 -
 06:05 AM
